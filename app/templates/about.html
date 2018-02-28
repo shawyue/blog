@@ -1,0 +1,23 @@
+{% extends "blogbase.html" %}
+{% block addhead %}
+<title>关于</title>
+<link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename = 'js/about.js') }}" ></script> 
+{% endblock %}
+{% block container %}
+<div class="writearticle">
+    <a class="btn btn-default btn-md" href="/write?action=about" target="_blank">
+        <i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;写简介</i>
+    </a>
+</div>
+<p class="declare">{{tips}}</p>
+<hr >
+<div id="content_container"></div>
+
+<script>
+    
+    window.onload = function() {
+      addArticle();
+    };
+</script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "blogbase.html" %}
+{% block addhead %}
+<title>文章</title>
+<link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+
+<script src="{{ url_for('static', filename = 'js/detail.js') }}" ></script> 
+{% endblock %}
+{% block container %}
+<p class="declare">{{tips}}</p>
+<hr >
+<div id="articleContainer">
+
+</div>
+<script>
+    
+    window.onload = function() {
+      addArticle();
+    };
+</script>
+{% endblock %}

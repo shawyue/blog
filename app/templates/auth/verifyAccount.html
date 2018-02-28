@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>验证邮箱</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename = 'js/verifyAccount.js') }}" ></script>   
+        <link href="{{ url_for('static', filename='css/verifyAccount.css') }}" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+
+
+        </header>
+        <article>
+                <div class="container">
+                    <div class="form-container">
+                        <h2>验证账户</h2>
+                        <br>
+                              <form action="#" name="verifyAccount_form" method="POST" >
+                                
+                                <fieldset class="form-group">
+                                  
+                                  <input type="email" id="signupEmail" name="signupEmail" class="form-control" placeholder="电子邮箱" onblur="signupEmail_onblur(this.id)" required>
+                                  <div id="email_feedback"></div>
+                                </fieldset>
+                                <div class="form-inline" >
+                                    <div class="form-group" style="width:60%;">
+                                        <label class="sr-only" for="captchaInput"></label>
+                                        <div class="input-group">
+                                          <div class="input-group-addon">验证码</div>
+                                          <input type="text" class="form-control" id="captcheInput" name="captcha" placeholder="输入验证码" onblur="captcha_onblur(this.id)">
+                                          
+                                        </div>
+                                      </div>
+                                      <button id="getCaptcha" type="button" class="btn btn-primary" style="width:38%;font-size:0.8rem;height:2.5rem;" onclick="get_captcha(this.id)">点击发送验证码</button>
+                                      <div id="captcha_feedback" class="captcha_err_display invalid-feedback"></div>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="return verify_account_onclick();">提交</button>
+                              </form>
+                    </div>
+                            </div> <!-- /container -->
+                    
+                    
+        </article>
+        <footer>
+
+        </footer>
+    </body>
+</html>

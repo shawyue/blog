@@ -1,0 +1,26 @@
+{% extends "blogbase.html" %}
+{% block addhead %}
+<title>主页</title>
+<link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename = 'js/home.js') }}" ></script> 
+{% endblock %}
+{% block container %}
+<p class="declare">{{tips}}</p>
+<hr >
+
+    
+{% endblock %}
+{% block bodyscript %}
+<script>
+    window.onload = function() {
+          addIterm();
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        (function(){
+            window.scrollReveal = new scrollReveal({reset: true});
+        })();
+        };
+    };
+</script> 
+
+
+{% endblock %}
