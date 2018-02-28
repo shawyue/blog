@@ -25,6 +25,10 @@
 5,设置配置
 
         设置config.py中的配置，配置mysql, redis, 邮箱等
+ 
+5,设置配置
+
+        设置config.py中的配置，配置mysql, redis, 邮箱等
 
 6,运行
 
