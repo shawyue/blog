@@ -4,7 +4,7 @@
 
 ## 使用
 
-注意：使用的Python为3.6.4， mysql为5.7.21
+注意：使用的Python为3， mysql为5.7，需要将MySQL字符集设为utf-8
 
 1,克隆仓库
 
